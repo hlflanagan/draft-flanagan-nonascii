@@ -4,12 +4,12 @@
 
 Internet Engineering Task Force                         H. Flanagan, Ed.
 Internet-Draft                                                RFC Editor
-Intended status: Informational                              July 8, 2014
-Expires: January 9, 2015
+Intended status: Informational                          January 27, 2015
+Expires: July 31, 2015
 
 
                 The Use of Non-ASCII Characters in RFCs
-                       draft-flanagan-nonascii-03
+                       draft-flanagan-nonascii-04
 
 Abstract
 
@@ -18,8 +18,9 @@ Abstract
    the use of non-ASCII characters in RFCs.  While English remains the
    accepted language of the Series, the encoding of future RFCs will be
    in UTF-8.  This document describes the RFC Editor requirements and
-   guidance regarding the use of non-ASCII characters in RFCs.  This
-   document updates the RFC Style Guide [I-D.iab-styleguide].
+   guidance regarding the use of non-ASCII characters in RFCs.  
+
+   This document updates RFC 7322.
 
 Status of This Memo
 
@@ -50,14 +51,6 @@ Copyright Notice
    carefully, as they describe your rights and restrictions with respect
    to this document.  Code Components extracted from this document must
    include Simplified BSD License text as described in Section 4.e of
-
-
-
-Flanagan                 Expires January 9, 2015                [Page 1]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
-
    the Trust Legal Provisions and are provided without warranty as
    described in the Simplified BSD License.
 
@@ -86,12 +79,12 @@ Table of Contents
 1.  Introduction
 
    For much of the history of the RFC Series, the character encoding
-   used for RFCs has been ASCII ASCII [ANSI.X3-4.1986].  This was a
-   sensible choice at the time: the language of the Series is English, a
-   language that only uses ASCII-encoded characters (ignoring for a
-   moment words borrowed from more richly decorated alphabets); and,
-   ASCII is the "lowest common denominator" for character encoding,
-   making cross-platform viewing trivial.
+   used for RFCs has been ASCII ASCII [ANSI.X3-4.1986].  This was a  
+   sensible choice at the time: the language of the Series has
+   always been English, a language that primarily uses ASCII-encoded 
+   characters (ignoring for a moment words borrowed from more richly 
+   decorated alphabets); and, ASCII is the "lowest common denominator" 
+   for character encoding, making cross-platform viewing trivial.
 
    There are limits ASCII, however, that hinder its continued use as the
    exclusive character encoding for the Series.  The increasing need for
@@ -108,19 +101,13 @@ Table of Contents
    checking and editorial tools.
 
 
-
-Flanagan                 Expires January 9, 2015                [Page 2]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
-
 2.  Basic requirements
 
    Two fundamental requirements inform the guidance and examples
    provided in this document.  They are:
 
    o  Searches against RFC indexes and database tables need to return
-      expected results andsupport appropriate Unicode string matching
+      expected results and support appropriate Unicode string matching
       behaviors;
 
    o  RFCs must be able to display correctly across a wide range of
@@ -155,20 +142,6 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
 
    Example of non-ASCII characters that do not require escaping RFC4475
    [RFC4475]:
-
-
-
-
-
-
-
-
-
-
-Flanagan                 Expires January 9, 2015                [Page 3]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
 
    This particular response contains unreserved and non-ascii
    UTF-8 characters.
@@ -219,13 +192,6 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
    characters, an ASCII-only identifier is required to assist in search
    and indexing of the document.
 
-
-
-Flanagan                 Expires January 9, 2015                [Page 4]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
-
 3.4.  Body of the document
 
    When the mention of non-ASCII characters is required for correct
@@ -273,14 +239,6 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
    family.
 
    Example of proper identification of Unicode characters in an RFC:
-
-
-
-
-Flanagan                 Expires January 9, 2015                [Page 5]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
 
    Acceptable:
 
@@ -331,13 +289,6 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
    language in which you are writing the code.
 
 
-
-
-Flanagan                 Expires January 9, 2015                [Page 6]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
-
    Example: TBD
 
 3.7.  Bibliographic text
@@ -383,17 +334,6 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
    particular normalization form is expected, note that in the text of
    the RFC.
 
-
-
-
-
-
-
-Flanagan                 Expires January 9, 2015                [Page 7]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
-
 5.  IANA Considerations
 
    This document makes no request of IANA.
@@ -420,10 +360,6 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
               Set - 7-bit American Standard Code for Information
               Interchange", ANSI X3.4, 1986.
 
-   [I-D.iab-styleguide]
-              Flanagan, H., "RFC Style Guide", draft-iab-styleguide-02
-              (work in progress), April 2014.
-
    [MerrWeb]  Merriam-Webster,Inc., "Merriam-Webster's Collegiate
               Dictionary, 11th Edition", 2009.
 
@@ -441,14 +377,8 @@ Internet-Draft              non-ASCII in RFCs                  July 2014
    [RFC6949]  Flanagan, H. and N. Brownlee, "RFC Series Format
               Requirements and Future Development", RFC 6949, May 2013.
 
-
-
-
-
-Flanagan                 Expires January 9, 2015                [Page 8]
-
-Internet-Draft              non-ASCII in RFCs                  July 2014
-
+   [RFC7322]  Flanagan, H. and S. Ginoza, "RFC Style Guide", RFC 7322,
+              September 2014.
 
 Appendix A.  Acknowledgements
 
