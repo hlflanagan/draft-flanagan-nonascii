@@ -20,7 +20,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="info" docName="draft-flanagan-nonascii-04" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-nonascii-05" ipr="trust200902">
 <front>
  <title abbrev="non-ASCII in RFCs">The Use of Non-ASCII Characters in RFCs</title>
 
@@ -41,7 +41,7 @@
    </address>
  </author>
 
- <date month="January" year="2015" day="27"/>
+ <date month="May" year="2015" day="20"/>
 
  <area>General</area>
  <workgroup>Internet Engineering Task Force</workgroup>
@@ -69,7 +69,7 @@ This document updates RFC 7322.
 <section title="Introduction">
 <t>
 For much of the history of the RFC Series, the character encoding used
-for RFCs has been ASCII <xref target="ANSI.X3-4.1986">ASCII</xref>.  
+for RFCs has been <xref target="ANSI.X3-4.1986">ASCII</xref>.  
 This was a sensible choice at the time: the language of the Series has
 always been English, a language that primarily uses ASCII-encoded characters 
 (ignoring for a moment words borrowed from more richly decorated alphabets); 
@@ -77,12 +77,15 @@ and, ASCII is the "lowest common denominator" for character encoding, making
 cross-platform viewing trivial.
 </t>
 <t>
-There are limits ASCII, however, that hinder its continued use as the
+There are limits to ASCII, however, that hinder its continued use as the
 exclusive character encoding for the Series.  The increasing need for 
 easily readable, internationalized content suggests it is time to allow 
 non-ASCII characters in RFCs where necessary.  To support this move away 
 from ASCII, RFCs will switch to supporting UTF-8 as the default character 
-encoding <xref target="RFC6949">RFC6949</xref>.
+encoding and allow support for a broad range of Unicode character support. 
+<xref target="UnicodeCurrent"/>  Note that the RFC Editor may reject any 
+codepoint that does not render adequately in enough formats or on in enough 
+rendering engines using the current tooling.
 </t>
 <t>
 Given the continuing goal of maximum readability across platforms, the
@@ -109,8 +112,9 @@ behaviors; </t>
 
   <t>RFCs must be able to display correctly across a wide range of
 readers and browsers.  People whose system does not have the fonts needed to
-display a particular RFC need to be able to read the non- canonical HTML, 
-text, or PDF RFC correctly. </t>
+display a particular RFC need to be able to read the various publication 
+formats and the XML correctly in order to understand and implement the 
+information described in the document.</t>
 </list>
 </t>
 </section>
@@ -132,18 +136,18 @@ characters, and grammar of the text.
 <t>
 Where the use of non-ASCII characters is purely as part of an example
 and not otherwise required for correct protocol operation, escaping 
-the Unicode character is not required.  Note, however, that as the 
+the non-ASCII character is not required.  Note, however, that as the 
 language of the RFC Series is English, the use of non-ASCII characters 
 is based on the spelling of words commonly used in the English language 
 following the guidance in the <xref target="MerrWeb">Merriam-Webster 
 dictionary</xref>. 
 </t>
 <t>
-The RFC Editor will use the primary spelling listed in the dictionary
+The RFC Editor will use the primary spelling listed in that dictionary
 by default.
 </t>
 <t>Example of non-ASCII characters that do not require escaping
-<xref target="RFC4475">RFC4475</xref>:
+<xref target="RFC4475"/>:
 
 <figure>
 <artwork><![CDATA[
@@ -208,9 +212,9 @@ and Fred Baker.
 <t>
 Company names may appear in several places within an RFC.  The rules for
 company names follow similar guidance to that of person names.  Valid
-Unicode is required.  For company names that include non-ASCII characters, 
-an ASCII-only identifier is required to assist in search and indexing of 
-the document.
+Unicode is required.  For company names that include non-ASCII 
+characters, an ASCII-only identifier is required to assist in search and 
+indexing of the document.
 </t>
 </section>
 
@@ -371,9 +375,9 @@ Allowable addition to the above citation:
 </figure>
 </section>
 
-<section title="Keywords">
+<section title="Keywords and Citation Tags">
 <t>
-Keywords must be ASCII only.
+Keywords and citation tags must be ASCII only.
 </t>
 </section>
 
@@ -422,7 +426,8 @@ RFC.
 <t>
 The ability to use non-ASCII characters in RFCs in a clear and consistent 
 manner will improve the ability to describe internationalized protocols 
-and will recognize the diversity of authors.
+and will recognize the diversity of authors. However, the goal of readability
+will override the use of non-ASCII characters within the text.
 </t>
 </section>
 
@@ -434,9 +439,16 @@ to preserve expected behavior and protocol information.
 </section>
 
 <section title="Change log - to be removed by the RFC Editor">
+<section title="-04 to -05">
+<t>Keywords: expanded section to include citation tags.</t>
+<t>Internationalization considerations: reiterated that the use of non-ASCII 
+characters is not automatically guaranteed.</t>
+</section>
+<section title="-02 to -04">
 <t>Introduction and Abstract: change to be clearer about what/why non-ASCII
    characters are being allowed.</t>
 <t>XML Markup: section added.</t>
+</section>
 </section>
 
 </middle>
@@ -453,17 +465,24 @@ to preserve expected behavior and protocol information.
 &RFC7322;
 &I-D.hoffman-xml2rfc;
 
-      <reference anchor="MerrWeb">
-        <front>
-          <title>Merriam-Webster's Collegiate Dictionary, 11th Edition</title>
-
-          <author>
-            <organization>Merriam-Webster,Inc.</organization>
-          </author>
-
-          <date year="2009" />
-        </front>
-      </reference>
+<reference anchor="MerrWeb">
+  <front>
+    <title>Merriam-Webster's Collegiate Dictionary, 11th Edition</title>
+    <author>
+      <organization>Merriam-Webster,Inc.</organization>
+    </author>
+    <date year="2009" />
+  </front>
+</reference>
+<reference anchor="UnicodeCurrent" target="http://www.unicode.org/versions/latest/">
+  <front>
+    <title>The Unicode Standard</title>
+    <author>
+      <organization>The Unicode Consortium</organization>
+    </author>
+    <date year="2014-present"/>
+  </front>
+</reference>
 </references>
 
 
