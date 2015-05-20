@@ -41,7 +41,7 @@
    </address>
  </author>
 
- <date month="April" year="2015" day="15"/>
+ <date month="May" year="2015" day="20"/>
 
  <area>General</area>
  <workgroup>Internet Engineering Task Force</workgroup>
@@ -82,10 +82,10 @@ exclusive character encoding for the Series.  The increasing need for
 easily readable, internationalized content suggests it is time to allow 
 non-ASCII characters in RFCs where necessary.  To support this move away 
 from ASCII, RFCs will switch to supporting UTF-8 as the default character 
-encoding and allow, subject to review, the Unicode code points from the 
-Basic Multilingual Plane (BMP) only, and even in that case subject to the 
-judgement of the Editor that the code points increased the utility, 
-comprehensibility, or clarity of the RFC.<xref target="UnicodeCurrent" />
+encoding and allow support for a broad range of Unicode character support. 
+<xref target="UnicodeCurrent"/>  Note that the RFC Editor may reject any 
+codepoint that does not render adequately in enough formats or on in enough 
+rendering engines using the current tooling.
 </t>
 <t>
 Given the continuing goal of maximum readability across platforms, the
@@ -212,7 +212,7 @@ and Fred Baker.
 <t>
 Company names may appear in several places within an RFC.  The rules for
 company names follow similar guidance to that of person names.  Valid
-Unicode (BMP only) is required.  For company names that include non-ASCII 
+Unicode is required.  For company names that include non-ASCII 
 characters, an ASCII-only identifier is required to assist in search and 
 indexing of the document.
 </t>
@@ -375,9 +375,9 @@ Allowable addition to the above citation:
 </figure>
 </section>
 
-<section title="Keywords">
+<section title="Keywords and Citation Tags">
 <t>
-Keywords must be ASCII only.
+Keywords and citation tags must be ASCII only.
 </t>
 </section>
 
@@ -440,14 +440,15 @@ to preserve expected behavior and protocol information.
 
 <section title="Change log - to be removed by the RFC Editor">
 <section title="-04 to -05">
-<t>Introduction: change to specify what range of Unicode will be supported.</t>
+<t>Keywords: expanded section to include citation tags.</t>
 <t>Internationalization considerations: reiterated that the use of non-ASCII 
 characters is not automatically guaranteed.</t>
 </section>
-<section title="-02 to -04"
+<section title="-02 to -04">
 <t>Introduction and Abstract: change to be clearer about what/why non-ASCII
    characters are being allowed.</t>
 <t>XML Markup: section added.</t>
+</section>
 </section>
 
 </middle>
