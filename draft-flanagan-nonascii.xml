@@ -7,6 +7,8 @@
 <!ENTITY RFC4475 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4475.xml">
 <!ENTITY RFC6949 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6949.xml">
 <!ENTITY RFC7322 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7322.xml">
+<!ENTITY RFC7564 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7564.xml">
+<!ENTITY RFC7613 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7613.xml">
 <!ENTITY I-D.hoffman-xml2rfc SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.hoffman-xml2rfc.xml">
 ]>
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
@@ -41,7 +43,7 @@
    </address>
  </author>
 
- <date month="May" year="2015" day="20"/>
+ <date month="August" year="2015" day="19"/>
 
  <area>General</area>
  <workgroup>Internet Engineering Task Force</workgroup>
@@ -98,6 +100,9 @@ tools.
 <t>
 This document updates the <xref target="RFC7322">RFC Style Guide</xref>.
 </t>
+<t>The details described in this document are expected to change based on experience gained in implementing the RFC production center's toolset. Revised documents will be published capturing those changes as the toolset is completed. Other implementers must not expect those changes to remain backwards-compatible with the details described this document.</t>
+
+
 </section>
 
 <section title="Basic requirements">
@@ -240,7 +245,7 @@ used, Unicode character names should be in all capital letters.</t>
 </t>
 
 <t>Examples:</t>
-<t>OLD [draft-ietf-precis-framework]: </t>
+<t>OLD <xref target="RFC7564"/>: </t>
 
 <figure>
 <artwork><![CDATA[
@@ -258,10 +263,10 @@ they might appear when presented using a "creative" font family.
 <artwork><![CDATA[
 However, the problem is made more serious by introducing the full 
 range of Unicode code points into protocol strings.  For example, 
-the characters 
-U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 (ᏚᎢᎵᎬᎢᎬᏒ) from the Cherokee 
-block look similar to the ASCII characters "STPETER" as they might appear 
-when presented using a "creative" font family.
+the characters U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 
+(ᏚᎢᎵᎬᎢᎬᏒ) from the Cherokee block look similar to the ASCII 
+characters "STPETER" as they might appear when presented using a 
+"creative" font family.
 ]]></artwork>
 </figure>
 
@@ -269,11 +274,12 @@ when presented using a "creative" font family.
 
 <figure>
 <artwork><![CDATA[
-However, the problem is made more serious by introducing the full range of 
-Unicode code points into protocol strings.  For example, the characters "ᏚᎢᎵᎬᎢᎬᏒ"
-(U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2) from the Cherokee block look 
-similar to the ASCII characters "STPETER" as they might appear when presented 
-using a "creative" font family.
+However, the problem is made more serious by introducing the full 
+range of Unicode code points into protocol strings.  For example, 
+the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA U+13A2 U+13B5 U+13AC U+13A2 
+U+13AC U+13D2) from the Cherokee block look similar to the ASCII 
+characters "STPETER" as they might appear when presented using a 
+"creative" font family.
 ]]></artwork>
 </figure>
 
@@ -328,8 +334,59 @@ just the non-ASCII characters -- that will be allowed on a case-by-case
 basis.
 </t>
 <t>
-Example: TBD
+Original text from "Preparation, Enforcement, and Comparison of Internationalized Strings Representing Usernames and Passwords" <xref target="RFC7613"/>.
 </t>
+      <figure>
+        <preamble>Table 3: A sample of legal passwords</preamble>
+        <artwork><![CDATA[
++------------------------------------+------------------------------+
+| # | Password                       | Notes                        |
++------------------------------------+------------------------------+
+| 12| <correct horse battery staple> | ASCII space is allowed       |
++------------------------------------+------------------------------+
+| 13| <Correct Horse Battery Staple> | Different from example 12    |
++------------------------------------+------------------------------+
+| 14| <&#x3C0;&#xDF;&#xE5;>          | Non-ASCII letters are OK     |
+|   |                                | (e.g., GREEK SMALL LETTER    |
+|   |                                | PI, U+03C0)                  |
++------------------------------------+------------------------------+
+| 15| <Jack of &#x2666;s>            | Symbols are OK (e.g., BLACK  |
+|   |                                | DIAMOND SUIT, U+2666)        |
++------------------------------------+------------------------------+
+| 16| <foo&#x1680;bar>               | OGHAM SPACE MARK, U+1680, is |
+|   |                                | mapped to U+0020 and thus    |
+|   |                                | the full string is mapped to |
+|   |                                | <foo bar>                    |
++------------------------------------+------------------------------+
+        ]]></artwork>
+      </figure>
+<t>Preferred text:</t>
+      <figure>
+        <preamble>Table 3: A sample of legal passwords</preamble>
+        <artwork><![CDATA[
++------------------------------------+------------------------------+
+| # | Password                       | Notes                        |
++------------------------------------+------------------------------+
+| 12| <correct horse battery staple> | ASCII space is allowed       |
++------------------------------------+------------------------------+
+| 13| <Correct Horse Battery Staple> | Different from example 12    |
++------------------------------------+------------------------------+
+| 14| <πß๗>                          | Non-ASCII letters are OK     |
+|   |                                | (e.g., GREEK SMALL LETTER    |
+|   |                                | PI, U+03C0; LATIN SMALL      |
+|   |                                | LETTER SHARP S, U+00DF; THAI |
+|   |                                | DIGIT SEVEN, U+0E57)         |
++------------------------------------+------------------------------+
+| 15| <Jack of ♦s>                   | Symbols are OK (e.g., BLACK  |
+|   |                                | DIAMOND SUIT, U+2666)        |
++------------------------------------+------------------------------+
+| 16| <foo bar>                      | OGHAM SPACE MARK, U+1680, is |
+|   |                                | mapped to U+0020 and thus    |
+|   |                                | the full string is mapped to |
+|   |                                | <foo bar>                    |
++------------------------------------+------------------------------+
+        ]]></artwork>
+      </figure>
 </section>
 
 <section title="Code components">
@@ -337,11 +394,6 @@ Example: TBD
 The RFC Editor encourages the use of the U+ notation except within a
 code component where you must follow the rules of the programming
 language in which you are writing the code.
-</t>
-<t>
-Example:
-
-TBD
 </t>
 </section>
 
@@ -444,6 +496,11 @@ to preserve expected behavior and protocol information.
 <t>Internationalization considerations: reiterated that the use of non-ASCII 
 characters is not automatically guaranteed.</t>
 </section>
+<section title="-04 to -05">
+<t>Introduction: added statement regarding document subject to change.</t>
+<t>Tables: added example.</t>
+<t>Code: removed placeholder for example.</t>
+</section>
 <section title="-02 to -04">
 <t>Introduction and Abstract: change to be clearer about what/why non-ASCII
    characters are being allowed.</t>
@@ -463,6 +520,8 @@ characters is not automatically guaranteed.</t>
 &RFC5137;
 &RFC6949;
 &RFC7322;
+&RFC7564;
+&RFC7613;
 &I-D.hoffman-xml2rfc;
 
 <reference anchor="MerrWeb">
