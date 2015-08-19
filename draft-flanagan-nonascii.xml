@@ -43,7 +43,7 @@
    </address>
  </author>
 
- <date month="August" year="2015" day="14"/>
+ <date month="August" year="2015" day="19"/>
 
  <area>General</area>
  <workgroup>Internet Engineering Task Force</workgroup>
@@ -263,10 +263,10 @@ they might appear when presented using a "creative" font family.
 <artwork><![CDATA[
 However, the problem is made more serious by introducing the full 
 range of Unicode code points into protocol strings.  For example, 
-the characters 
-U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 (ᏚᎢᎵᎬᎢᎬᏒ) from the Cherokee 
-block look similar to the ASCII characters "STPETER" as they might appear 
-when presented using a "creative" font family.
+the characters U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2 
+(ᏚᎢᎵᎬᎢᎬᏒ) from the Cherokee block look similar to the ASCII 
+characters "STPETER" as they might appear when presented using a 
+"creative" font family.
 ]]></artwork>
 </figure>
 
@@ -274,11 +274,12 @@ when presented using a "creative" font family.
 
 <figure>
 <artwork><![CDATA[
-However, the problem is made more serious by introducing the full range of 
-Unicode code points into protocol strings.  For example, the characters "ᏚᎢᎵᎬᎢᎬᏒ"
-(U+13DA U+13A2 U+13B5 U+13AC U+13A2 U+13AC U+13D2) from the Cherokee block look 
-similar to the ASCII characters "STPETER" as they might appear when presented 
-using a "creative" font family.
+However, the problem is made more serious by introducing the full 
+range of Unicode code points into protocol strings.  For example, 
+the characters "ᏚᎢᎵᎬᎢᎬᏒ" (U+13DA U+13A2 U+13B5 U+13AC U+13A2 
+U+13AC U+13D2) from the Cherokee block look similar to the ASCII 
+characters "STPETER" as they might appear when presented using a 
+"creative" font family.
 ]]></artwork>
 </figure>
 
