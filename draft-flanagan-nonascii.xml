@@ -20,7 +20,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="info" docName="draft-flanagan-nonascii-05" ipr="trust200902">
+<rfc category="info" docName="draft-flanagan-nonascii-06" ipr="trust200902">
 <front>
  <title abbrev="non-ASCII in RFCs">The Use of Non-ASCII Characters in RFCs</title>
 
@@ -41,7 +41,7 @@
    </address>
  </author>
 
- <date month="May" year="2015" day="20"/>
+ <date month="November" year="2015" day="18"/>
 
  <area>General</area>
  <workgroup>Internet Engineering Task Force</workgroup>
@@ -302,7 +302,7 @@ indicated by the U+2206 character ("Δ", INCREMENT).</t>
 indicated by the U+2206 character (INCREMENT, "Δ").</t>
 
   <t>Temperature changes in the Temperature Control Protocol are
-indicated by the [Delta] character "Δ" (U+2206).</t>
+indicated by the "Delta" character "Δ" (U+2206).</t>
 
   <t>Temperature changes in the Temperature Control Protocol are
 indicated by the character "Δ" (INCREMENT, U+2206).</t>
@@ -406,8 +406,9 @@ RFC.
 <t>As described above, use of non-ASCII characters in areas such as
 email, company name, addresses, and name is allowed. In order to make it 
 easier for code to identify the appropriate ASCII alternatives, authors
-must include an "ascii" attribute to their XML markup.  See 
-<xref target="I-D.hoffman-xml2rfc"/> for more detail.
+must include an "ascii" attribute to their XML markup when an ASCII 
+alternative is required.  See <xref target="I-D.hoffman-xml2rfc"/> for 
+more detail on how to tag ASCII alternatives.
 </t>
 </section>
 
