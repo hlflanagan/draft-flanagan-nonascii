@@ -338,6 +338,15 @@ Flanagan                Expires May 19, 2016                    [Page 6]
 Internet-Draft              non-ASCII in RFCs              November 2015
 
 
+
+
+
+
+Flanagan                Expires February 20, 2016               [Page 6]
+
+Internet-Draft              non-ASCII in RFCs                August 2015
+
+
    5.  Temperature changes in the Temperature Control Protocol are
        indicated by the "Delta" character "Δ" (U+2206).
 
