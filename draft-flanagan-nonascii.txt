@@ -510,8 +510,6 @@ Allowable addition to the above citation:
 
 
 
-
-
 Flanagan                Expires May 19, 2016                    [Page 9]
 
 Internet-Draft              non-ASCII in RFCs              November 2015
